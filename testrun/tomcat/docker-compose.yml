@@ -13,8 +13,8 @@ services:
         #   restart_policy:
         #     condition: on-failure
         networks:
-        default:
-            ipv4_address: 172.20.0.4
+            default:
+                ipv4_address: 172.20.0.4
         restart: always
 networks:
   default:
