@@ -1,0 +1,15 @@
+version: '3'
+services:
+    my-app:
+        image: binumanoharan/playground:my-app
+        command: tail -f /dev/null
+        volumes:
+            - my-app-dir:/test
+    tomcat:
+        image: binumanoharan/playground:my-tomcat
+        volumes:
+            - my-app-dir:/usr/local/tomcat/webapps/test
+        ports:
+            - 1234:8080
+volumes:
+    my-app-dir:
